@@ -1,0 +1,21 @@
+# Root agent: localize -> reproduce -> patch -> verify -> submit.
+# All agents use the same base model (single-model rule).
+name: fixer
+description: Fixes a Python repository issue with a minimal, verified patch.
+model: gemma-4-31b-it-qat-w4a16-ct
+instruction: !include prompts/fixer.md
+generate_content_config: !include configs/sampling.yaml
+tools:
+  - run_command
+  - read_file
+  - edit_file
+  - write_file
+  - get_status
+  - submit_patch
+  - search_similar_code
+  - get_code_neighbors
+  - agent_tool:
+      config_path: sub_agents/localizer.yaml
+      skip_summarization: true
+skills:
+  - skills/python-bugfix-playbook

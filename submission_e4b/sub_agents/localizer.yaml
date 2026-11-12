@@ -1,0 +1,16 @@
+# Read-only scout. Runs in its own context so file dumps never enter the fixer's history.
+name: localizer
+description: >-
+  Read-only code scout. Give it a short description of the bug or feature (symbols, error text,
+  file hints). It returns a ranked list of at most 3 edit locations (file:line-range, symbol) with
+  one-sentence reasons, plus the existing test file most related to the issue. It never edits files.
+model: gemma-4-e4b-it-qat-w4a16-ct
+instruction: !include prompts/localizer.md
+generate_content_config: !include configs/sampling_scout.yaml
+include_contents: none
+tools:
+  - search_similar_code
+  - get_code_neighbors
+  - get_code_subgraph
+  - read_file
+  - run_command

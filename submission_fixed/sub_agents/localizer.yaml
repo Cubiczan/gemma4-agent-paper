@@ -1,0 +1,11 @@
+name: localizer
+description: Read-only code scout. Give it a 2-3 sentence description of the bug; it returns up to 3 ranked edit locations (file:line-range, symbol) and the closest existing test file. It never edits files.
+model: gemma-4-31b-it-qat-w4a16-ct
+instruction: !include ../prompts/localizer.md
+generate_content_config: !include ../configs/sampling_scout.yaml
+tools:
+  - search_similar_code
+  - get_code_neighbors
+  - get_code_subgraph
+  - read_file
+  - run_command

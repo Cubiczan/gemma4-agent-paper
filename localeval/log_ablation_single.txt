@@ -1,0 +1,14 @@
+rich_4075 resolved= False calls= 30 t= 24 loc= False err= None
+rich_3882 resolved= True calls= 8 t= 8 loc= False err= None
+rich_3894 resolved= True calls= 13 t= 15 loc= False err= None
+rich_3905 resolved= True calls= 9 t= 9 loc= False err= None
+rich_3718 resolved= False calls= 23 t= 61 loc= False err= None
+rich_3935 resolved= False calls= 15 t= 15 loc= False err= None
+rich_4006 resolved= False calls= 42 t= 33 loc= False err= None
+rich_4075 resolved= False calls= 41 t= 33 loc= False err= None
+rich_3882 resolved= True calls= 12 t= 46 loc= False err= Unterminated string starting at: line 1 column 12 (char 11)
+rich_3894 resolved= True calls= 17 t= 20 loc= False err= None
+rich_3905 resolved= True calls= 6 t= 6 loc= False err= None
+rich_3718 resolved= False calls= 16 t= 22 loc= False err= None
+rich_3935 resolved= False calls= 19 t= 16 loc= False err= None
+rich_4006 resolved= False calls= 41 t= 38 loc= False err= None
